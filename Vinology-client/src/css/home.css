@@ -1,0 +1,13 @@
+#logo {
+    content: url('/Users/Daniel/Flatiron/code/Final Proyect/Vinology/Vinology-client/src/assets/final-final.png'); 
+    margin: auto;
+    
+  }
+
+  .home-wrapper {
+    width: 450px;
+    max-height: 80px;
+    min-height: 600px;
+    margin: auto;
+  }
+

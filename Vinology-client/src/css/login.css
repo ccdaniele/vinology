@@ -1,0 +1,31 @@
+.body-login{
+    
+    background: url('/Users/Daniel/Flatiron/code/Final Proyect/Vinology/Vinology-client/src/assets/laura-rivera-fP6qewDsku0-unsplash.jpeg');
+    height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body-login2{
+    
+    background: url('/Users/Daniel/Flatiron/code/Final Proyect/Vinology/Vinology-client/src/assets/austrian-national-library-EXgfRVFJK4M-unsplash.jpeg');
+    height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.inner-sign-up {
+    width: 450px;
+    margin: auto;
+    background: linear-gradient(-45deg, #8fade0,  #f5eeeb, #417c91, #c0f4f4);
+    background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 15px;
+    transition: all .3s;
+    opacity: 80%;
+  }
