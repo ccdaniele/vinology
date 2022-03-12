@@ -1,5 +1,5 @@
 #logo {
-    content: url('/Users/Daniel/Flatiron/code/Final Proyect/Vinology/Vinology-client/src/assets/final-final.png'); 
+    content: url('../assets/home-img.png'); 
     margin: auto;
     
   }

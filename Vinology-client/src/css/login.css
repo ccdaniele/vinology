@@ -1,6 +1,6 @@
 .body-login{
     
-    background: url('/Users/Daniel/Flatiron/code/Final Proyect/Vinology/Vinology-client/src/assets/laura-rivera-fP6qewDsku0-unsplash.jpeg');
+    background: url('../assets/login-image1.jpeg');
     height: 150vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
 .body-login2{
     
-    background: url('/Users/Daniel/Flatiron/code/Final Proyect/Vinology/Vinology-client/src/assets/austrian-national-library-EXgfRVFJK4M-unsplash.jpeg');
+    background: url('../assets/login-image2.jpeg');
     height: 150vh;
   background-position: center;
   background-repeat: no-repeat;
