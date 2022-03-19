@@ -57,6 +57,7 @@ module VinServer
         }
     end
 
+    Rails.application.secrets
     # Create a DogStatsD client instance.
     statsd = Datadog::Statsd.new('localhost', 8125)
 
