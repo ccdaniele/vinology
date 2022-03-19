@@ -5,6 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
   
-  User.create(name:'Daniel', email:'daniel@gmail.com', username:'daniel', password_digest:'1234567')
+  User.create(email:'first@gmail.com', username:'first', password_digest:'1234567')
   Query.create(name:'first', user_id:'1')
   Car.create(vin_number:'868346892346928463877', query_id:'1' )

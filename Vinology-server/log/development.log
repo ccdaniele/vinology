@@ -2986,3 +2986,398 @@ Processing by Api::V1::AuthController#show as */*
 Completed 200 OK in 221ms (Views: 111.0ms | ActiveRecord: 9.1ms | Allocations: 10294)
 
 
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:23:54 -0400
+Processing by Api::V1::AuthController#show as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/auth_controller.rb:23:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:23:in `show'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.21ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 1.6ms | Allocations: 2399)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:27:15 -0400
+Processing by Api::V1::AuthController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:23:in `show'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.15ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 1.0ms | Allocations: 1615)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:27:24 -0400
+Processing by Api::V1::AuthController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:23:in `show'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.31ms)
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1614)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:41:16 -0400
+Processing by Api::V1::AuthController#show as */*
+Completed 500 Internal Server Error in 19249ms (Allocations: 233061)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/api/v1/auth_controller.rb:19:in `show'
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:41:44 -0400
+Processing by Api::V1::AuthController#show as */*
+Completed 500 Internal Server Error in 306045ms (Allocations: 194785)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `rescue in process_action'
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:46:53 -0400
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:46:55 -0400
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:46:55 -0400
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:46:55 -0400
+Processing by Api::V1::AuthController#show as */*
+Started POST "/api/v1/users" for ::1 at 2022-03-19 15:46:55 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/auth_controller.rb:22:in `show'
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:22:in `show'
+  [1m[36mCACHE User Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (2.88ms)
+Completed 200 OK in 179ms (Views: 40.6ms | ActiveRecord: 12.7ms | Allocations: 2110564)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:01 -0400
+Processing by Api::V1::AuthController#create as */*
+Processing by Api::V1::AuthController#create as */*
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"German", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"German", "password"=>"[FILTERED]"}}}
+  Parameters: {"user"=>{"username"=>"david", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"david", "password"=>"[FILTERED]"}}}
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  Parameters: {"user"=>{"username"=>"German", "email"=>"german@gmail.com", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "German"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :password_confirm. Context: { controller: Api::V1::UsersController, action: create, request: #<ActionDispatch::Request:0x0000000109ae6c30>, params: {"user"=>{"username"=>"German", "email"=>"german@gmail.com", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]"}, "controller"=>"api/v1/users", "action"=>"create"} }[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.32ms)
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+Completed 401 Unauthorized in 291ms (Views: 32.7ms | ActiveRecord: 21.2ms | Allocations: 2978029)
+
+
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Started POST "/api/v1/users" for ::1 at 2022-03-19 15:47:02 -0400
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+Processing by Api::V1::UsersController#create as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.42ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.91ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "German"], ["LIMIT", 1]]
+  Parameters: {"user"=>{"username"=>"david", "email"=>"david@gmail.com", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]"}}
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+[31mUnpermitted parameter: :password_confirm. Context: { controller: Api::V1::UsersController, action: create, request: #<ActionDispatch::Request:0x0000000109fb3e98>, params: {"user"=>{"username"=>"david", "email"=>"david@gmail.com", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]"}, "controller"=>"api/v1/users", "action"=>"create"} }[0m
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "german@gmail.com"], ["username", "German"], ["password_digest", "[FILTERED]"], ["created_at", "2022-03-19 19:47:02.994410"], ["updated_at", "2022-03-19 19:47:02.994410"]]
+Completed 401 Unauthorized in 860ms (Views: 63.5ms | ActiveRecord: 12.9ms | Allocations: 6286892)
+
+
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.27ms)
+Completed 401 Unauthorized in 1323ms (Views: 123.7ms | ActiveRecord: 8.5ms | Allocations: 8744148)
+
+
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+Completed 401 Unauthorized in 880ms (Views: 15.5ms | ActiveRecord: 10.4ms | Allocations: 6477002)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:03 -0400
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "david@gmail.com"], ["username", "david"], ["password_digest", "[FILTERED]"], ["created_at", "2022-03-19 19:47:03.501766"], ["updated_at", "2022-03-19 19:47:03.501766"]]
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:03 -0400
+  [1m[36mUser Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "German"], ["id", 4], ["LIMIT", 1]]
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:03 -0400
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+Processing by Api::V1::AuthController#create as */*
+Processing by Api::V1::AuthController#create as */*
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "david"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  Parameters: {"user"=>{"username"=>"german", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"german", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "german"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.39ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.42ms)
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+Completed 401 Unauthorized in 115ms (Views: 72.1ms | ActiveRecord: 2.5ms | Allocations: 1299480)
+
+
+Completed 401 Unauthorized in 297ms (Views: 156.8ms | ActiveRecord: 2.7ms | Allocations: 3306237)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.23ms)
+Completed 401 Unauthorized in 294ms (Views: 83.0ms | ActiveRecord: 4.2ms | Allocations: 3335189)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:04 -0400
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:04 -0400
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:04 -0400
+Processing by Api::V1::AuthController#create as */*
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+Processing by Api::V1::AuthController#create as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mQuery Load (4.5ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   [1m[36mQuery Load (2.4ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 4]]
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.34ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.8ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+Completed 401 Unauthorized in 249ms (Views: 75.8ms | ActiveRecord: 2.7ms | Allocations: 2813316)
+
+
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+Completed 401 Unauthorized in 239ms (Views: 66.2ms | ActiveRecord: 4.0ms | Allocations: 2706009)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.6ms)
+Completed 401 Unauthorized in 150ms (Views: 48.5ms | ActiveRecord: 2.4ms | Allocations: 1458955)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:05 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:05 -0400
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mCar Load (7.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Processing by Api::V1::AuthController#create as */*
+[active_model_serializers]   [1m[36mCar Load (10.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.78ms)
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:05 -0400
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1263.29ms)
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+Completed 201 Created in 2436ms (Views: 1279.9ms | ActiveRecord: 43.0ms | Allocations: 24115637)
+
+
+Completed 401 Unauthorized in 206ms (Views: 65.3ms | ActiveRecord: 3.0ms | Allocations: 1837853)
+
+
+Processing by Api::V1::AuthController#create as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1438.31ms)
+Completed 201 Created in 3389ms (Views: 1472.7ms | ActiveRecord: 56.2ms | Allocations: 31414391)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2022-03-19 15:47:05 -0400
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.48ms)
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+Completed 401 Unauthorized in 225ms (Views: 22.1ms | ActiveRecord: 2.5ms | Allocations: 2314725)
+
+
+Processing by Api::V1::AuthController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.69ms)
+Completed 401 Unauthorized in 209ms (Views: 58.2ms | ActiveRecord: 3.2ms | Allocations: 2067741)
+
+
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:22:in `show'
+  [1m[36mCACHE User Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers]   [1m[36mQuery Load (2.7ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:23:in `show'
+[active_model_serializers]   [1m[36mCar Load (2.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:23:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (102.38ms)
+Completed 200 OK in 235ms (Views: 137.7ms | ActiveRecord: 10.4ms | Allocations: 2747141)
+
+
+Started GET "/api/v1/queries" for ::1 at 2022-03-19 15:47:05 -0400
+Processing by Api::V1::QueriesController#index as */*
+  [1m[36mQuery Load (2.9ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCar Load (3.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."query_id" = ?[0m  [["query_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (599.87ms)
+Completed 200 OK in 725ms (Views: 700.0ms | ActiveRecord: 17.2ms | Allocations: 8400307)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:30 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"david", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"david", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mQuery Load (5.3ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mCar Load (2.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (181.02ms)
+Completed 202 Accepted in 475ms (Views: 182.0ms | ActiveRecord: 10.4ms | Allocations: 1828516)
+
+
+Started GET "/api/v1/queries" for ::1 at 2022-03-19 15:47:31 -0400
+Processing by Api::V1::QueriesController#index as */*
+  [1m[36mQuery Load (5.4ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCar Load (3.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."query_id" = ?[0m  [["query_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (123.88ms)
+Completed 200 OK in 180ms (Views: 157.6ms | ActiveRecord: 11.5ms | Allocations: 2116719)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:47:45 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"david", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"david", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mQuery Load (2.9ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mCar Load (2.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (90.29ms)
+Completed 202 Accepted in 382ms (Views: 94.3ms | ActiveRecord: 7.5ms | Allocations: 1824187)
+
+
+Started GET "/api/v1/queries" for ::1 at 2022-03-19 15:47:46 -0400
+Processing by Api::V1::QueriesController#index as */*
+  [1m[36mQuery Load (2.3ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCar Load (3.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."query_id" = ?[0m  [["query_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (125.77ms)
+Completed 200 OK in 170ms (Views: 153.3ms | ActiveRecord: 7.7ms | Allocations: 2114037)
+
+
+Started GET "/api/v1/User.all" for 127.0.0.1 at 2022-03-19 15:48:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/User.all"):
+  
+Started GET "/api/v1/user" for 127.0.0.1 at 2022-03-19 15:48:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-19 15:48:46 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daniel.calderon/.asdf/installs/ruby/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daniel.calderon/.asdf/installs/ruby/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.6ms | Allocations: 79702)
+Completed 200 OK in 47ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 450282)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:49:53 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"daniel", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"daniel", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "daniel"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.3ms | Allocations: 10148)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/api/v1/auth_controller.rb:8:in `create'
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:50:19 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"david", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"david", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (32.85ms)
+Completed 202 Accepted in 305ms (Views: 34.1ms | ActiveRecord: 3.2ms | Allocations: 13741)
+
+
+Started GET "/api/v1/queries" for ::1 at 2022-03-19 15:50:19 -0400
+Processing by Api::V1::QueriesController#index as */*
+  [1m[36mQuery Load (0.3ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."query_id" = ?[0m  [["query_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.55ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 2.9ms | Allocations: 18218)
+
+
+Started POST "//api/v1/login" for ::1 at 2022-03-19 15:54:33 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"david", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"david", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mQuery Load (0.5ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "queries" ON "cars"."query_id" = "queries"."id" WHERE "queries"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (33.32ms)
+Completed 202 Accepted in 323ms (Views: 33.2ms | ActiveRecord: 4.8ms | Allocations: 21973)
+
+
+Started GET "/api/v1/queries" for ::1 at 2022-03-19 15:54:34 -0400
+Processing by Api::V1::QueriesController#index as */*
+  [1m[36mQuery Load (0.5ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."query_id" = ?[0m  [["query_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/queries_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.26ms)
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 2.3ms | Allocations: 18223)
+
+

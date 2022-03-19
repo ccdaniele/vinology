@@ -15,7 +15,6 @@ class Api::V1::AuthController < ApplicationController
     end
 
     def show
-      
       token = request.headers['Authorization'].split(' ')[1]
       begin
         JWT.decode(token, 'my_s3cr3t', true, algorithm: 'HS256')

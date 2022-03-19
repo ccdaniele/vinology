@@ -49,7 +49,7 @@ export default class Register extends Component {
             <div className="wrapper">
             <div className="inner-sign-up">
             <form onSubmit={this.handleSubmit}>
-               <h3 id='logoNav' style={size}></h3> 
+               <p id='logoNav' style={size}></p> 
                <div className='form-group'>
                    
                </div>
