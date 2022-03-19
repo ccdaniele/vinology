@@ -118,7 +118,7 @@ import {myQueries} from '../actions/query.action'
             <div className="inner-sign-up">
               {this.state.error? <h4 style={{color:'white'}}>{this.state.error}</h4> : null}
                 <form className="login-form" onSubmit={this.handleSubmit}>
-                    <h3 id='logoNav' style={size}className="form-text"></h3> 
+                    <p id='logoNav' style={size}className="form-text"></p> 
                       <div className='form-group'>
                           <label className="form-text"></label>
                         <input type='text' className='form-control' placeholder='Username' onChange={e=> this.setState({username: e.target.value})}/>
