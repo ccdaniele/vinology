@@ -1,0 +1,4 @@
+v.1.0 - Original with Ruby 2.6.8 rails 6.0 with scss kevin's fix 
+
+v.1.1 - Ruby and rails updated including scss fix
+v.1.1 - react start port modified/bug with 'current_user' api fixed
