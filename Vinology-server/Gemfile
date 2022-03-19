@@ -51,3 +51,5 @@ gem 'lograge'
 
 # Gemfile
 gem 'ddtrace', require: 'ddtrace/auto_instrument'
+
+gem 'dogstatsd-ruby'
