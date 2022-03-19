@@ -1,5 +1,5 @@
 require_relative "boot"
-
+require 'datadog/statsd'
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -14,6 +14,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require 'lograge'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -36,5 +37,28 @@ module VinServer
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Lograge config
+    config.lograge.enabled = true
+
+    # This specifies to log in JSON format
+    config.lograge.formatter = Lograge::Formatters::Json.new
+
+    ## Disables log coloration
+    config.colorize_logging = false
+
+    # Log to a dedicated file
+    config.lograge.logger = ActiveSupport::Logger.new(File.join(Rails.root, 'log', "#{Rails.env}.log"))
+
+    # This is useful if you want to log query parameters
+    config.lograge.custom_options = lambda do |event|
+        { :ddsource => 'ruby',
+          :params => event.payload[:params].reject { |k| %w(controller action).include? k }
+        }
+    end
+
+    # Create a DogStatsD client instance.
+    statsd = Datadog::Statsd.new('localhost', 8125)
+
   end
 end
